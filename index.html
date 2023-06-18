@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cevabı Parça Parça Yazdır</title>
+</head>
+<body>
+  <input type="text" id="mesajInput">
+  <button onclick="yazdirCevabi()">Cevabı Yazdır</button>
+  <div id="cevap"></div>
+
+  <script>
+    var cevapDiv = document.getElementById("cevap");
+    var yazmaHizi = 10; // Her bir harfin ekrana yazılma hızı (milisaniye cinsinden)
+    var yazmaIslemi;
+
+    function yazdirCevabi() {
+      var mesaj = document.getElementById("mesajInput").value; // Input alanından mesajı al
+
+      // Önce mevcut yazıyı temizle
+      cevapDiv.innerHTML = "";
+
+      var index = 0;
+
+      function yazdir() {
+        if (index < mesaj.length) {
+          cevapDiv.innerHTML += mesaj.charAt(index);
+          index++;
+          yazmaIslemi = setTimeout(yazdir, yazmaHizi);
+        }
+      }
+
+      yazdir();
+    }
+
+    function duraklatYazdirma() {
+      clearTimeout(yazmaIslemi);
+    }
+  </script>
+</body>
+</html>
