@@ -10,13 +10,11 @@
 
   <script>
     var cevapDiv = document.getElementById("cevap");
-    var yazmaHizi = 100; // Her bir harfin ekrana yazılma hızı (milisaniye cinsinden)
+    var yazmaHizi = 100;
     var yazmaIslemi;
 
     function yazdirCevabi() {
-      var mesaj = document.getElementById("mesajInput").value; // Input alanından mesajı al
-
-      // Önce mevcut yazıyı temizle
+      var mesaj = document.getElementById("mesajInput").value;
       cevapDiv.innerHTML = "";
 
       var index = 0;
