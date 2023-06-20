@@ -1,2 +1,2 @@
 # js-project
- JavaScript cümledeki kelimeleri tek-tek ve yumuşak yazdırma
+ JavaScript kelimeleri parça-parça yazdırma
